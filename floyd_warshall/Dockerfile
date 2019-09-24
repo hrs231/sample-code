@@ -20,7 +20,7 @@ WORKDIR /floyd_warshall
 # RUN pip install --requirement /tmp/requirements.txt
 
 # The commands to run each time
-RUN /bin/bash -c "source ./.env"
+# RUN /bin/bash -c "source ./.env"
 ENV PYTHONPATH "${PYTHONPATH}:/floyd_warshall"
 
 # will run the sample PoC file
