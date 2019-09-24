@@ -1,5 +1,5 @@
 import sys
-from simulate_production_environment import SimulateProductionEnvironment
+from floyd_warshall.simulate_production_environment import SimulateProductionEnvironment
 
 
 def main():

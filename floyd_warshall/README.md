@@ -4,9 +4,13 @@
 
 A quick PoC, to have a look at the viability of using Floyd Warshall algo to detect opportunities from inefficient pricing.
 
-### Test Run on cloud
+### Run on cloud
 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/hrs231/sample-code.git&cloudshell_working_dir=floyd_warshall)
+For testing on the new cloud run service
+
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/hrs231/sample-code.git&cloudshell_working_dir=floyd_warshall){:target="_blank"}
+
+Just click button above, it'll provision a server, build the container and deploy using cloud run.
 
 ### SetUp
 
@@ -27,13 +31,13 @@ setprojectdir .
 
  
 ```bash
-test_run_system_from_input_file.py
+bin/run_system_from_input_file.py
 ```
 
 Will push test messages from data/sample_test_messages.txt into the system
 
 ```bash
-STDIN | test_run_system_from_stdin.py
+STDIN | bin/run_system_from_stdin.py
 ```
 
 System handles messages from STDIN

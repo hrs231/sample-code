@@ -1,4 +1,4 @@
-# This is our first build stage, it will not persist in the final image
+# Building from base os level
 FROM ubuntu as intermediate
 
 # install git
@@ -19,11 +19,9 @@ WORKDIR /floyd_warshall
 COPY --from=intermediate /sample-code/floyd_warshall/requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
-EXPOSE 5000
-
 # The commands to run each time
 # RUN /bin/bash -c "source ./.env"
 ENV PYTHONPATH "${PYTHONPATH}:/floyd_warshall"
 
-# will run the sample PoC file
+# Need to run the flask app
 CMD python ./index.py
