@@ -4,13 +4,21 @@
 
 A quick PoC, to have a look at the viability of using Floyd Warshall algo to detect opportunities from inefficient pricing.
 
+A detailed problem description is in the docs directory.
+
 ### Run on cloud
 
 For testing on the new cloud run service
 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/hrs231/sample-code.git&cloudshell_working_dir=floyd_warshall){:target="_blank"}
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/hrs231/sample-code.git&cloudshell_working_dir=floyd_warshall)
 
-Just click button above, it'll provision a server, build the container and deploy using cloud run.
+Just click button above (open in new tab), it'll provision a server, build the container and deploy using cloud run.
+
+It'll produce an endpoint you can check
+
+```bash
+curl https://floyd-warshall-hgpw32quoa-uc.a.run.app/run-sample-data
+```
 
 ### SetUp
 
