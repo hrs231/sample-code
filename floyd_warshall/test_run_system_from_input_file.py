@@ -12,7 +12,6 @@ def main():
     for msg_line in input_data:
         print(msg_line)
         output_lines.append(msg_line)
-        output_string += msg_line
         response = system_simulator.process_input_data(msg_line)
         if response is not None:
             print(response)
