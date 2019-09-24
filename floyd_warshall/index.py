@@ -7,8 +7,8 @@ app = Flask(__name__)
 def hello():
     return "Hello World!"
 
-@app.route("/test")
-def test_run():
+@app.route("/run-sample-data")
+def run_sample_data():
     test_run_system_from_input_file.main()
 
 if __name__ == "__main__":
