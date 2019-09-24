@@ -16,12 +16,14 @@ COPY --from=intermediate /sample-code/floyd_warshall /floyd_warshall
 WORKDIR /floyd_warshall
 
 # Update any requirements (currently none, so just uncomment this if needed )
-# COPY --from=intermediate /sample-code/floyd_warshall/requirements.txt /tmp/
-# RUN pip install --requirement /tmp/requirements.txt
+COPY --from=intermediate /sample-code/floyd_warshall/requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
+EXPOSE 5000
 
 # The commands to run each time
 # RUN /bin/bash -c "source ./.env"
 ENV PYTHONPATH "${PYTHONPATH}:/floyd_warshall"
 
 # will run the sample PoC file
-CMD python test_run_system_from_input_file.py
+CMD python ./index.py
