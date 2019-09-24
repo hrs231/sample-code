@@ -4,6 +4,10 @@
 
 A quick PoC, to have a look at the viability of using Floyd Warshall algo to detect opportunities from inefficient pricing.
 
+### Test Run on cloud
+
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/hrs231/sample-code.git&cloudshell_working_dir=floyd_warshall)
+
 ### SetUp
 
 Best run using a virtual env
