@@ -2,12 +2,13 @@
 
 ### Overview
 
-A quick PoC
+A quick PoC, to have a look at the viability of using Floyd Warshall algo to detect opportunities from inefficient pricing.
 
 ### SetUp
 
 Best run using a virtual env
-```python
+
+```bash
 python -m pip install --upgrade pip
 py -m pip install --user virtualenv
 
@@ -21,19 +22,19 @@ setprojectdir .
 ### Usage
 
  
-```python
+```bash
 test_run_system_from_input_file.py
 ```
 
 Will push test messages from data/sample_test_messages.txt into the system
 
-```python
+```bash
 STDIN | test_run_system_from_stdin.py
 ```
 
 System handles messages from STDIN
 
-```python
+```bash
 tests/price_engine_tests.py
 ```
 
@@ -68,6 +69,13 @@ RateRequests <-> Client Handler <-> Price Engine
 ````
 
 ### ToDo
-* Unit tests light
+* Integrate into CI/CD environment
+* Further Unit tests
 * Split into microservices
 * Build an adaptor to plug into live data feeds
+
+### Notes
+* 2019-09-23
+* PoC needs much more work, to as trade fees and quantity available are real world factor that need to be taken into account.
+* However, it does have potential to be a useful algo, and is worth looking at in further depth.
+
