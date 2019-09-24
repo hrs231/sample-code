@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/run-sample-data")
 def run_sample_data():
-    test_run_system_from_input_file.main()
+    return test_run_system_from_input_file.main()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 8080)), debug=True)
